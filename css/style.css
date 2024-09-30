@@ -1,4 +1,466 @@
-*{
-
-font-style = 'ariel'
+* {
+    font-family: 'Hammersmith', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.hammersmith-one-regular {
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body {
+    
+    line-height: 1.6;
+    background-color: #f8f3f367;
+    background-image: url('bg.jpg'); /* Change this to your image path or URL */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Set the body height to fill the viewport */
+    margin: 0; /* Remove default margin */
+    margin-top: 100px;
+    
+    
+
+}
+
+header {
+    background-color: #b80f0a;
+    padding: 20px 0;
+    width: 100%;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center logo horizontally */
+    position: fixed; /* Position relative for absolute elements */
+    min-height: 100px; /* Set minimum height for header to cover logo */
+    z-index: 1000;
+    margin-top: -100px;
+    
+}
+
+.logo {
+    position: absolute; /* Position logo absolutely */
+    left: 50%; /* Move to the center */
+    transform: translateX(-50%); /* Adjust for centering */
+ 
+}
+
+.logo img {
+    width: 200px; /* Adjust logo width */
+    height: auto; 
+    line-height: 20px;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically centered */
+    background-color: #b80f0a;
+    padding-left: 10px; /* Left padding for the navbar */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-right: auto; /* Align navbar to the left */
+    justify-content: space-between; /* Space between navbar links and social icons */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0; /* Ensure no margin on the list */
+    display: flex; /* Align nav items in a row */
+    font-size: 22px;
+}
+
+.nav-links > li {
+    position: relative; /* Position for dropdowns */
+    float: left;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover Effect: Scale and Bold */
+.nav-links a:hover {
+    font-weight: bold;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content,
+.sub-dropdown-content {
+    border-radius: 5px;
+    display: none; /* Hide dropdowns initially */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.61); /* Set background to slightly transparent */
+    min-width: 160px;
+    z-index: 1;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.dropdown-content a,
+.sub-dropdown-content a {
+    color: #b80f0a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: flex; /* Show dropdown on hover */
+}
+
+/* Sub-Menu Styling */
+.sub-dropdown {
+    position: relative;
+}
+
+/* Show Sub-Dropdown on Hover */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block; /* Show sub-dropdown on hover */
+}
+
+/* Dropdown Transitions */
+.dropdown-content,
+.sub-dropdown-content {
+    transition: all 0.3s ease;
+    opacity: 0; /* Start as invisible */
+    visibility: hidden; /* Hidden by default */
+    transform: translateY(-10px); /* Slight upward position */
+}
+
+/* Dropdown Visibility and Transition */
+.dropdown:hover .dropdown-content,
+.sub-dropdown:hover .sub-dropdown-content {
+    opacity: 1; /* Make visible on hover */
+    visibility: visible; /* Show when hovered */
+    transform: translateY(0); /* Move into view */
+}
+
+/* Sub-dropdown specific */
+.sub-dropdown-content {
+    top: 0;
+    left: 100%; /* Display sub-dropdown to the right of the parent */
+    transform: translateX(-10px); /* Slide from the right */
+    transition: all 0.3s ease;
+}
+
+/* Submenu animation */
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Add max-height and overflow settings to ensure visibility */
+.dropdown-content {
+    max-height: 300px; /* Adjust as needed */
+     /* Enable scrolling if items exceed max-height */
+}
+
+
+
+.social-icons img {
+    width: 50px;
+    float: left;
+    padding-right: 10px;
+    
+}
+
+.social-icons {
+    display: flex; /* Align icons in a row */
+    align-items: center; /* Center icons vertically */
+    float : left;
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 10px; /* Space between icons */
+    font-size: 1.5rem; /* Size of the icons */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #f56c6c; /* Change color on hover */
+    transform: scale(1.5);
+}
+
+
+
+
+.hero {
+    
+    
+    color: rgb(170, 66, 40);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-top: 90px;
+    
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+.btn {
+    background-color: #e17055;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.menu {
+    padding: 60px 0;
+    
+    background-color: #f4ebe2; 
+}
+.about {
+    background-color: #d3d3d300;
+    margin-top: 50px;
+}
+
+.about h2, .menu h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.about{
+    padding: 20px;
+    margin: 20px auto;
+    max-width: auto; /* Limit the width of the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.about h2, .contact h2 {
+    text-align: center; /* Center the headings */
+    color: #b80f0a; /* Match the header color */
+}
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-items img{
+    display: flex;
+    width : 350px;
+    border-radius: 5px;
+    
+}
+
+.menu-item {
+    background-color: #f4ebe2;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    margin-bottom: 15px;
+}
+
+
+/*Menu Carousel */
+.carousel {
+    margin: 40px 0;
+
+    background-color: #f3f3f38c;
+    position: relative; /* To allow absolute positioning of buttons */
+}
+
+.carousel-container {
+    position: relative;
+    
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease ease-in-out; /* Smooth transition for slide movement */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 0 0 100%; /* Each set of images takes full width */
+    transition: opacity 0.5s ease ease-in-out; /* Transition for opacity */
+    opacity: 0; /* Start with opacity 0 */
+}
+
+.carousel-images.active {
+    opacity: 1; /* Fade in the active images */
+}
+
+.carousel-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px; /* Spacing between images */
+    transition: opacity 0.5s ease ease-in-out; /* Smooth fade-in effect */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+/*Reach Us */
+.embed-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust the spacing between the two objects */
+    margin-right: 100px;
+  }
+  
+  .instagram-media {
+    flex-basis: 45%; /* Adjust the width of the Instagram embed */
+  }
+  
+  iframe {
+    flex-basis: 45%; /* Adjust the width of the Google Maps iframe */
+  }
+  
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #b80f0a;
+    color: white;
+    padding: 40px 0;
+    
+    position: relative; 
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  
+  
+  .footer-brand h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-right: auto;
+  }
+  
+  .footer-brand p {
+    max-width: 300px;
+    line-height: 1.5;
+  }
+  
+  .footer-nav, .footer-social, .footer-contact {
+    flex: 1 1 200px;
+    margin-left: 250px;
+  }
+  
+  .footer-nav h4, .footer-social h4, .footer-contact h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-nav ul li, .footer-social ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav ul li a, .footer-social ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social ul {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social ul li img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .footer-contact p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .footer-bottom {
+    background-color: #a00d08;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
