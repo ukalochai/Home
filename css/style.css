@@ -371,6 +371,7 @@ header {
   
   .instagram-media {
     flex-basis: 45%; /* Adjust the width of the Instagram embed */
+    margin-left:100px;
   }
   
   iframe {
